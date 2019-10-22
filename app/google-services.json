@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "808850963593",
+    "firebase_url": "https://gimbersounds.firebaseio.com",
+    "project_id": "gimbersounds",
+    "storage_bucket": "gimbersounds.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808850963593:android:b74e6a90387bb804c51a58",
+        "android_client_info": {
+          "package_name": "cat.gimbernat.gimbersounds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808850963593-3ha7efeuorvsiak6ni06rup87nvgv053.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoKZo8zJiNkqThu11dtNVuCqZOY62y0ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808850963593-3ha7efeuorvsiak6ni06rup87nvgv053.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
