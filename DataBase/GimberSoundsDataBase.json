@@ -1,0 +1,259 @@
+{
+  "assets" : {
+    "efectos" : {
+      "ef001" : {
+        "category" : {
+          "cat1" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fefectos%2Fbosques.mp3?alt=media&token=55ddb05b-0742-4caa-9626-ed57e2128e0e"
+      },
+      "ef002" : {
+        "category" : {
+          "cat6" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fefectos%2Fcity-traffic-1.mp3?alt=media&token=6e22bb3b-a716-404d-9c56-fb9e435d60bf"
+      },
+      "ef003" : {
+        "category" : {
+          "cat6" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fefectos%2Fciudad.mp3?alt=media&token=d23c23ae-c739-4d5e-abc9-219980c7fb69"
+      },
+      "ef004" : {
+        "category" : {
+          "cat1" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fefectos%2Fgorila.mp3?alt=media&token=7e3117be-6ca1-4b64-a106-e6aee3615564"
+      },
+      "ef005" : {
+        "category" : {
+          "cat1" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fefectos%2Fgrillo.mp3?alt=media&token=aaf96927-d242-45da-92dd-0c5caa024e0f"
+      },
+      "ef006" : {
+        "category" : {
+          "cat3" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fefectos%2Flluvia1.mp3?alt=media&token=35dcaa8a-7b2b-4e95-92f5-1a52d02db79b"
+      },
+      "ef007" : {
+        "category" : {
+          "cat3" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fefectos%2Ftormenta.mp3?alt=media&token=9b5ffd01-8f15-4173-9865-399f00b07a13"
+      }
+    },
+    "imagenes" : {
+      "imag001" : {
+        "category" : {
+          "cat1" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fbosque1.jpg?alt=media&token=07bdb6bd-eabd-428d-9ef9-27aa5a0a5471"
+      },
+      "imag002" : {
+        "category" : {
+          "cat1" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fbosque2.jpg?alt=media&token=bc0f3aa0-218b-4f6f-9187-94dc1f5be589"
+      },
+      "imag003" : {
+        "category" : {
+          "cat1" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fbosque3.jpg?alt=media&token=ec4c7da9-8fb1-4ac7-900b-f2211f4b74a0"
+      },
+      "imag004" : {
+        "category" : {
+          "cat1" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fbosque4.jpg?alt=media&token=43cfc009-39c1-41c8-b76e-7b2bd05f57ab"
+      },
+      "imag005" : {
+        "category" : {
+          "cat2" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fplaya1.jpg?alt=media&token=b18df212-c658-491a-ab75-0c30c9d792f0"
+        },
+      "imag006" : {
+        "category" : {
+          "cat2" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fplaya2.jpg?alt=media&token=5b8e25ac-65d0-4907-b60d-6051bb331600"
+        },
+      "imag007" : {
+        "category" : {
+          "cat2" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fplaya3.jpg?alt=media&token=cb6fcd7a-99ff-4642-aef2-fa00d702e4c3"
+        },
+      "imag008" : {
+        "category" : {
+          "cat2" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fplaya4.jpg?alt=media&token=e1bd74c4-cc6f-4967-a2b3-a49b41de4c16"
+        },
+      "imag009" : {
+        "category" : {
+          "cat3" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fmonta%C3%B1a1.jpg?alt=media&token=a6336a12-23ac-4d36-9ed3-4affd9c4d7d4"
+        },
+      "imag0010" : {
+        "category" : {
+          "cat3" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fmonta%C3%B1a2.jpg?alt=media&token=a180295a-f95b-4a3e-903f-81f4556b3d12"
+        },
+      "imag0011" : {
+        "category" : {
+          "cat3" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fmonta%C3%B1a3.jpg?alt=media&token=5d6cc792-1f48-4637-a6ac-6244d055002c"
+        },
+      "imag0012" : {
+        "category" : {
+          "cat3" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fmonta%C3%B1a4.jpg?alt=media&token=764421d2-629b-462f-813b-cbd683515d6c"
+        },
+      "imag0013" : {
+        "category" : {
+          "cat4" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fdesierto1.jpg?alt=media&token=8a11e997-fb97-4dfa-b357-535047a5c96d"
+        },
+      "imag0014" : {
+        "category" : {
+          "cat4" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fdesierto2.jpg?alt=media&token=887919b9-8539-424d-9956-cbec1c29200b"
+        },
+      "imag0015" : {
+        "category" : {
+          "cat4" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fdesierto3.jpg?alt=media&token=2eff1edb-4afa-43f3-b0cf-33de42121447"
+        },
+      "imag0016" : {
+        "category" : {
+          "cat4" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fdesierto4.jpg?alt=media&token=5d549b79-b514-413c-a828-14cfcf7f80b7"
+        },
+      "imag0017" : {
+        "category" : {
+          "cat5" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fselva1.jpg?alt=media&token=b5db9cf5-a5a0-4553-93e3-deb067e1d9b5"
+        },
+      "imag0018" : {
+        "category" : {
+          "cat5" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fselva2.jpg?alt=media&token=4dd2ca90-f88e-4082-bfcc-adb3a006eb81"
+        },
+      "imag0019" : {
+        "category" : {
+          "cat5" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fselva3.jpg?alt=media&token=727ed9f1-6482-405d-b020-01088d8372a3"
+        },
+      "imag0020" : {
+        "category" : {
+          "cat5" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fselva4.jpg?alt=media&token=06ec60cb-beb8-4553-9c30-08e134bfa4fb"
+        },
+      "imag0021" : {
+        "category" : {
+          "cat6" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fciudad1.jpg?alt=media&token=56d81a49-419b-4763-bacb-9ad707ef722b"
+        },
+      "imag0022" : {
+        "category" : {
+          "cat6" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fciudad2.jpg?alt=media&token=88c683f5-f9b5-4473-9c6e-9590248a8664"
+        },
+      "imag0023" : {
+        "category" : {
+          "cat6" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fciudad3.jpg?alt=media&token=ad8f33cf-6807-49ff-a2ce-7dd8f3ad7692"
+        },
+      "imag0024" : {
+        "category" : {
+          "cat6" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%20elegir%2Fciudad4.jpg?alt=media&token=79159ef5-ae68-44cc-8fbe-3b1218bafbbc"
+        }
+
+      },
+    "sonidos" : {
+      "aud001" : {
+        "category" : {
+          "cat1" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fsonidos%2Fsonido%20bosque.mp3?alt=media&token=337d4c3c-7fb0-4667-8f65-14d22514b43b"
+      },
+      "aud002" : {
+        "category" : {
+          "cat2" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fsonidos%2Fsonido%20mar.mp3?alt=media&token=a27cc069-0c24-414d-ba53-6b8263cc3177"
+      },
+      "aud003" : {
+        "category" : {
+          "cat3" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fsonidos%2Fsonido%20monta%C3%B1a.mp3?alt=media&token=7745f03b-f3fa-42fd-81f8-e919bb96078d"
+      },
+      "aud004" : {
+        "category" : {
+          "cat4" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fsonidos%2Fsonido%20desierto.mp3?alt=media&token=4616a7fb-2cec-476d-af5d-a15ddefc20e3"
+      },
+      "aud005" : {
+        "category" : {
+          "cat5" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fsonidos%2Fsonido%20selva.mp3?alt=media&token=a6e1c6ef-3098-4018-b28d-67c33fd53cd6"
+      },
+      "aud006" : {
+        "category" : {
+          "cat6" : true
+        },
+        "url" : "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fsonidos%2Fsonido%20ciudad.mp3?alt=media&token=f8cf3497-bdef-4582-8d97-b199ad39e766"
+      }
+    }
+  },
+  "categorias" : {
+    "cat1" : {
+      "name" : "bosque",
+      "url":"https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%2Fbosque.jpg?alt=media&token=12f2eb87-894b-40c4-add2-0f9db63179a3"
+    },
+    "cat2" : {
+      "name" : "mar",
+      "url":"https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%2Fplaya.jpg?alt=media&token=e673853f-ffaf-4713-974f-2592a1ea3534"
+    },
+    "cat3" : {
+      "name" : "montaña",
+      "url":"https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%2Fmonta%C3%B1a.jpg?alt=media&token=2d93b77d-ea86-44cf-b268-aa751ea79997"
+    },
+    "cat4" : {
+      "name" : "desierto",
+      "url":"https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%2Fdesierto.jpg?alt=media&token=5e910230-703e-4c01-b22c-8155cc9f06a4"
+    },
+    "cat5" : {
+      "name" : "selva",
+      "url":"https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%2Fselva.jpg?alt=media&token=a8f9b2e7-0c64-4094-b02d-7d263993f0af"
+  },
+  "cat6" : {
+    "name" : "ciudad",
+    "url": "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fimagenes%2Fciudad.jpg?alt=media&token=0f280e9a-1474-4f27-974b-a4b26e3a2f47"
+  }
+}
+}
