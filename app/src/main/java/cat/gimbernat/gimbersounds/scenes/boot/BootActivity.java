@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.squareup.picasso.Picasso;
+
 import cat.gimbernat.gimbersounds.DataSources.SessionDataSource;
 import cat.gimbernat.gimbersounds.R;
 import cat.gimbernat.gimbersounds.scenes.categoriesList.CategoriesListActivity;
@@ -44,4 +46,6 @@ public class BootActivity extends AppCompatActivity implements IbootActivity {
         intent.setAction(Intent.ACTION_VIEW);
         BootActivity.this.startActivity(intent);
     }
+
+    
 }
