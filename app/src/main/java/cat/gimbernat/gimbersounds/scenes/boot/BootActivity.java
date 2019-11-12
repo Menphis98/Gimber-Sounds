@@ -8,7 +8,7 @@ import android.os.Bundle;
 import cat.gimbernat.gimbersounds.DataSources.SessionDataSource;
 import cat.gimbernat.gimbersounds.R;
 import cat.gimbernat.gimbersounds.scenes.categoriesList.CategoriesListActivity;
-import cat.gimbernat.gimbersounds.scenes.welcome.WelcomeActivity;
+import cat.gimbernat.gimbersounds.scenes.login.TermsActivity;
 
 interface IbootActivity{
      void navigateToPublic();
@@ -20,6 +20,9 @@ public class BootActivity extends AppCompatActivity implements IbootActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //TODO Remove the signOut
+        //SessionDataSource.shared.signOut();
         if(SessionDataSource.shared.isUserLogedIn()){
             this.navigateToPrivate();
         }else {
@@ -29,7 +32,7 @@ public class BootActivity extends AppCompatActivity implements IbootActivity {
 
     @Override
     public void navigateToPublic() {
-        Intent intent = new Intent(BootActivity.this, WelcomeActivity.class);
+        Intent intent = new Intent(BootActivity.this, TermsActivity.class);
         intent.setAction(Intent.ACTION_VIEW);
         BootActivity.this.startActivity(intent);
 
