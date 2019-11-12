@@ -22,7 +22,7 @@ public class BootActivity extends AppCompatActivity implements IbootActivity {
         setContentView(R.layout.activity_main);
 
         //TODO Remove the signOut
-        //SessionDataSource.shared.signOut();
+          //SessionDataSource.shared.signOut();
         if(SessionDataSource.shared.isUserLogedIn()){
             this.navigateToPrivate();
         }else {
