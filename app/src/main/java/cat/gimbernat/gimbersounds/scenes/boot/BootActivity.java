@@ -46,6 +46,4 @@ public class BootActivity extends AppCompatActivity implements IbootActivity {
         intent.setAction(Intent.ACTION_VIEW);
         BootActivity.this.startActivity(intent);
     }
-
-    
 }
