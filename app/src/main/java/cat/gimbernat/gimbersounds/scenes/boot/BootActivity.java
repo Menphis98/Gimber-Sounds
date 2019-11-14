@@ -19,7 +19,7 @@ public class BootActivity extends AppCompatActivity {
         CategoryDataSource.shared.subscribe(new Callback() {
             @Override
             public void onSuccess(Object responseObject) {
-                
+
             }
 
             @Override
