@@ -9,7 +9,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import cat.gimbernat.gimbersounds.Models.CategoriesModel;
+import cat.gimbernat.gimbersounds.models.CategoriesModel;
 import cat.gimbernat.gimbersounds.helpers.Callback;
 
 

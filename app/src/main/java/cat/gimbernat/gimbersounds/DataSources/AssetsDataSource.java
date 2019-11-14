@@ -8,7 +8,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import cat.gimbernat.gimbersounds.Models.AssetModel;
+import cat.gimbernat.gimbersounds.models.AssetModel;
 import cat.gimbernat.gimbersounds.helpers.Callback;
 
 
