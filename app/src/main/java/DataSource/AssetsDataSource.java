@@ -1,6 +1,4 @@
-package Controllers;
-
-import android.util.Log;
+package DataSource;
 
 import androidx.annotation.NonNull;
 import java.util.ArrayList;
@@ -13,9 +11,9 @@ import com.google.firebase.database.ValueEventListener;
 import Models.AssetModel;
 import Repositories.Callback;
 
-public class ReproduceController {
+public class AssetsDataSource {
 
-    public static ReproduceController shared = new ReproduceController();
+    public static AssetsDataSource shared = new AssetsDataSource();
 
     private ArrayList<AssetModel> assetsList = new ArrayList<AssetModel>();
 
@@ -53,7 +51,7 @@ public class ReproduceController {
                     assetsList.add(snapshotToAssetModel(item_snapshot));
                 }
 
-                ReproduceController.this.assetsList = assetsList;
+                AssetsDataSource.this.assetsList = assetsList;
 
                 if (!subscribeCallback) {
                     databaseReference.removeEventListener(this);

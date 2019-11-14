@@ -3,10 +3,8 @@ package cat.gimbernat.gimbersounds.scenes.boot;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 
-import Controllers.ReproduceController;
-import cat.gimbernat.gimbersounds.R;
+import DataSource.AssetsDataSource;
 import Repositories.Callback;
 
 public class BootActivity extends AppCompatActivity {
@@ -15,7 +13,7 @@ public class BootActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ReproduceController.shared.subscribe(new Callback() {
+        AssetsDataSource.shared.subscribe(new Callback() {
             @Override
             public void onSuccess(Object responseObject) {
             }
