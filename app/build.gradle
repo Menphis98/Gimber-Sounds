@@ -33,10 +33,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.google.firebase:firebase-analytics:17.2.0'
     implementation 'com.google.firebase:firebase-auth:19.0.0'
-    implementation files('picasso')
     implementation 'com.squareup.picasso:picasso:2.71828'
-
-
+    implementation 'com.google.firebase:firebase-database:19.2.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
