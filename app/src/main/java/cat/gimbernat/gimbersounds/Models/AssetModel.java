@@ -1,4 +1,4 @@
-package Models;
+package cat.gimbernat.gimbersounds.Models;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package Models;
+package cat.gimbernat.gimbersounds.Models;
 
 public class CategoriesModel {
     private String id;

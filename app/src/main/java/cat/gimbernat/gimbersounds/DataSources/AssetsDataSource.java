@@ -1,4 +1,4 @@
-package DataSource;
+package cat.gimbernat.gimbersounds.DataSources;
 
 import androidx.annotation.NonNull;
 import java.util.ArrayList;
@@ -8,8 +8,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import Models.AssetModel;
-import Repositories.Callback;
+import cat.gimbernat.gimbersounds.Models.AssetModel;
+import cat.gimbernat.gimbersounds.helpers.Callback;
+
 
 public class AssetsDataSource {
 

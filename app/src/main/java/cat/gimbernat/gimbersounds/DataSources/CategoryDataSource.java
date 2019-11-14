@@ -1,4 +1,4 @@
-package DataSource;
+package cat.gimbernat.gimbersounds.DataSources;
 
 import androidx.annotation.NonNull;
 
@@ -9,8 +9,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import Models.CategoriesModel;
-import Repositories.Callback;
+import cat.gimbernat.gimbersounds.Models.CategoriesModel;
+import cat.gimbernat.gimbersounds.helpers.Callback;
 
 
 public class CategoryDataSource {
