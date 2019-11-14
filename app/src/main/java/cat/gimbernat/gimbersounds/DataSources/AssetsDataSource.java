@@ -75,10 +75,9 @@ public class AssetsDataSource {
         ArrayList category = new ArrayList();
         String id = item_snapshot.getKey().toString();
         String url = item_snapshot.child("url").getValue().toString();
-        /*category = (String) item_snapshot.child("category").getValue().toString();
         for (DataSnapshot categoria : item_snapshot.child("category").getChildren()) {
             category.add(snapshotToAssetModel(categoria));
-        }*/
+        }
         return new AssetModel(id, url, category);
 
     }
