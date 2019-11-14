@@ -9,6 +9,20 @@ import com.squareup.picasso.Picasso;
 
 import cat.gimbernat.gimbersounds.R;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.GridView;
+import android.widget.ProgressBar;
+
+
+
+
+import cat.gimbernat.gimbersounds.models.AssetModel;
+import cat.gimbernat.gimbersounds.scenes.galleryDetail.DetailActivity;
+import com.albertleal.gimbernat.scenes.gallery.interfaces.IGalleryActivity;
+import com.albertleal.gimbernat.scenes.terms.TermsActivity;
+
 public class CategoriesListActivity extends AppCompatActivity {
 
     @Override
