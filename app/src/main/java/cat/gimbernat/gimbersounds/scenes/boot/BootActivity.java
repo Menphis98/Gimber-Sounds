@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.google.firebase.database.DataSnapshot;
+
 import DataSource.AssetsDataSource;
+import DataSource.CategoryDataSource;
 import Repositories.Callback;
 
 public class BootActivity extends AppCompatActivity {
@@ -13,9 +16,10 @@ public class BootActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        AssetsDataSource.shared.subscribe(new Callback() {
+        CategoryDataSource.shared.subscribe(new Callback() {
             @Override
             public void onSuccess(Object responseObject) {
+                
             }
 
             @Override
