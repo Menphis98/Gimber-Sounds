@@ -2,29 +2,50 @@ package cat.gimbernat.gimbersounds.scenes.boot;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.firebase.database.DataSnapshot;
+import com.squareup.picasso.Picasso;
 
-import DataSource.AssetsDataSource;
-import DataSource.CategoryDataSource;
-import Repositories.Callback;
+import cat.gimbernat.gimbersounds.DataSources.SessionDataSource;
+import cat.gimbernat.gimbersounds.R;
+import cat.gimbernat.gimbersounds.scenes.categoriesList.CategoriesListActivity;
+import cat.gimbernat.gimbersounds.scenes.login.TermsActivity;
 
-public class BootActivity extends AppCompatActivity {
-    
+interface IbootActivity{
+     void navigateToPublic();
+     void navigateToPrivate();
+ }
+public class BootActivity extends AppCompatActivity implements IbootActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        CategoryDataSource.shared.subscribe(new Callback() {
-            @Override
-            public void onSuccess(Object responseObject) {
-
-            }
-
-            @Override
-            public void onError() {
-            }
-        });
+        //TODO Remove the signOut
+          //SessionDataSource.shared.signOut();
+        if(SessionDataSource.shared.isUserLogedIn()){
+            this.navigateToPrivate();
+        }else {
+            this.navigateToPublic();
+        }
     }
+
+    @Override
+    public void navigateToPublic() {
+        Intent intent = new Intent(BootActivity.this, TermsActivity.class);
+        intent.setAction(Intent.ACTION_VIEW);
+        BootActivity.this.startActivity(intent);
+
+    }
+
+    @Override
+    public void navigateToPrivate() {
+        Intent intent = new Intent(BootActivity.this, CategoriesListActivity.class);
+        intent.setAction(Intent.ACTION_VIEW);
+        BootActivity.this.startActivity(intent);
+    }
+
+    
 }
