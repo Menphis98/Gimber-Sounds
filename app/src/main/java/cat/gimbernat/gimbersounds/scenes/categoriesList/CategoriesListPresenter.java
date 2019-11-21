@@ -11,6 +11,7 @@ import android.widget.TextView;
 import cat.gimbernat.gimbersounds.R;
 import cat.gimbernat.gimbersounds.helpers.Callback;
 import cat.gimbernat.gimbersounds.models.AssetModel;
+import cat.gimbernat.gimbersounds.models.CategoriesModel;
 import cat.gimbernat.gimbersounds.scenes.categoriesList.interfaces.ICategoriesListPresenter;
 import com.squareup.picasso.Picasso;
 
@@ -21,25 +22,24 @@ public class CategoriesListPresenter extends BaseAdapter implements ICategoriesL
     private CategoriesListActivity view;
     private CategoriesListInteractor interactor;
 
-    private ArrayList<AssetModel> items = new ArrayList<AssetModel>(); //data source of the list adapter
+    private ArrayList<CategoriesModel> items = new ArrayList<CategoriesModel>(); //data source of the list adapter
 
 
-    public GalleryPresenter(CategoriesListActivity view){
+    public CategoriesListPresenter(CategoriesListActivity view){
         this.view = view;
         this.interactor = new CategoriesListInteractor();
     }
 
     //Interface IGalleryPresenter
-    @Override
-    public void subscribeForAssets() {
-        this.view.showSpinner();
-        this.interactor.subscribeForAssets(new Callback() {
 
+    @Override
+    public void subscribeForCategories() {
+        this.view.showSpinner();
+        this.interactor.subscribeForCategories(new Callback() {
             @Override
             public void onSuccess(Object responseObject) {
-
-                ArrayList<AssetModel> assets = (ArrayList<AssetModel>) responseObject;
-                CategoriesListPresenter.this.items = assets;
+                ArrayList<CategoriesModel> categories = (ArrayList<CategoriesModel>) responseObject;
+                CategoriesListPresenter.this.items = categories;
                 //Notify the view that the content is ready to be used or updated
                 CategoriesListPresenter.this.view.setAdapterForGrid();
                 CategoriesListPresenter.this.view.hideSpinner();
@@ -47,7 +47,7 @@ public class CategoriesListPresenter extends BaseAdapter implements ICategoriesL
 
             @Override
             public void onError() {
-                //show some error on the UI
+
             }
         });
     }
@@ -60,7 +60,7 @@ public class CategoriesListPresenter extends BaseAdapter implements ICategoriesL
     }
 
     @Override
-    public AssetModel getItem(int position) {
+    public CategoriesModel getItem(int position) {
         return items.get(position); //returns list item at the specified position
     }
 
@@ -79,22 +79,23 @@ public class CategoriesListPresenter extends BaseAdapter implements ICategoriesL
         }
 
 
-        final AssetModel asset = getItem(position);
+        final CategoriesModel category = getItem(position);
         //Setting the texts
-        ((TextView) convertView.findViewById(R.id.description)).setText(asset.description);
-        ((TextView) convertView.findViewById(R.id.title)).setText(asset.title);
+        ((TextView) convertView.findViewById(R.id.title)).setText(category.getCategoryName());
 
         //Using Picasso to cache the image
-        Picasso.get().load(asset.url).into((ImageView) convertView.findViewById(R.id.imageView));
+        Picasso.get().load(category.getCategoryURL()).into((ImageView) convertView.findViewById(R.id.imageView));
 
         //Listener for the click on the item
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CategoriesListPresenter.this.view.navigateToDetail(asset);
+                CategoriesListPresenter.this.view.navigateToDetail(category);
             }
         });
 
         return convertView;
     }
+
+
 }
