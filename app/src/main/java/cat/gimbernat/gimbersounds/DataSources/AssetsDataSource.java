@@ -18,10 +18,9 @@ public class AssetsDataSource {
 
     private ArrayList<AssetModel> assetsList = new ArrayList<AssetModel>();
 
-    public AssetModel getById(String id) {
-
+    public AssetModel getCategoryList(String category) {
         for (AssetModel asset : this.assetsList) {
-            if (asset.id.equals(id)) {
+            if (asset.getCategory().equals(category)) {
                 return asset;
             }
         }
@@ -34,10 +33,13 @@ public class AssetsDataSource {
 
     }
 
+
+
     public void fetchAll(final Callback callback, final Boolean subscribe) {
         this.fetch(false, callback);
 
     }
+
 
     private void fetch(final Boolean subscribeCallback, final Callback callback) {
 
