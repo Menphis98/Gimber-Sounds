@@ -23,6 +23,9 @@ public class DetailCategoriesListActivity extends AppCompatActivity implements I
     //Setting the UI
     private ProgressBar spinner;
 
+    //Intent Input parameter
+    public static String CONSTANT_ID_ASSET = "PARAM_ID_ASSET";
+
     //Lifecycle
     @Override
     protected void onCreate(Bundle savedInstanceState) {

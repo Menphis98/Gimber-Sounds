@@ -71,7 +71,7 @@ public class DetailCategoriesListPresenter extends BaseAdapter implements IDetai
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) this.view.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             //Dedicated layout for the item itself
-            convertView = inflater.inflate(R.layout.activity_gallery_item, parent, false);
+            convertView = inflater.inflate(R.layout.detail_activity_categories_list_item, parent, false);
         }
 
 
