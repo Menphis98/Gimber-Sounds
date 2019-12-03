@@ -12,9 +12,9 @@ import java.util.ArrayList;
 public class DetailCategoriesListInteractor implements IDetailCategoriesListInteractor{
 
     @Override
-    public void subscribeForAssets(final Callback callback) {
+    public void subscribeForAssets(String category ,final Callback callback) {
         //Interface IGalleryInteractor
-            AssetsDataSource.shared.subscribe(new Callback() {
+            AssetsDataSource.shared.getAssetsByCategory(category ,new Callback() {
                 @Override
                 public void onSuccess(Object responseObject) {
                     ArrayList<AssetModel> assets = (ArrayList<AssetModel>) responseObject;

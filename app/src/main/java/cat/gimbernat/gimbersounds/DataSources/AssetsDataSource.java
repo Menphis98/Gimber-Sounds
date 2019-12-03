@@ -23,7 +23,7 @@ public class AssetsDataSource {
 
     public void getAssetsByCategory(final String category, final Callback callback) {
 
-        ArrayList<AssetModel> assetsList = new ArrayList<AssetModel>();
+        ArrayList<AssetModel> local = new ArrayList<AssetModel>();
 
         if (assetsList.isEmpty()){
             this.fetch(false, new Callback() {
@@ -40,12 +40,12 @@ public class AssetsDataSource {
 
         } else {
             for (AssetModel asset : this.assetsList) {
-                if (asset.getCategory().equals(category)) {
-                    assetsList.add(asset);
+                if (asset.getCategory().equals(category.toUpperCase())) {
+                    local.add(asset);
                 }
             }
 
-            callback.onSuccess(assetsList);
+            callback.onSuccess(local);
         }
     }
 
@@ -95,12 +95,9 @@ public class AssetsDataSource {
 
     private AssetModel snapshotToAssetModel(DataSnapshot item_snapshot) {
 
-        ArrayList category = new ArrayList();
         String id = item_snapshot.getKey().toString();
         String url = item_snapshot.child("url").getValue().toString();
-        for (DataSnapshot categoria : item_snapshot.child("category").getChildren()) {
-            category.add(snapshotToAssetModel(categoria));
-        }
+        String category = "cat1";//item_snapshot.child("category").toString();
         return new AssetModel(id, url, category);
 
     }

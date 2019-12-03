@@ -30,9 +30,9 @@ public class DetailCategoriesListPresenter extends BaseAdapter implements IDetai
     }
 
     @Override
-    public void subscribeForAssets() {
+    public void subscribeForAssets(String category) {
         this.view.showSpinner();
-        this.interactor.subscribeForAssets(new Callback() {
+        this.interactor.subscribeForAssets(category ,new Callback() {
 
             @Override
             public void onSuccess(Object responseObject) {
@@ -78,10 +78,9 @@ public class DetailCategoriesListPresenter extends BaseAdapter implements IDetai
         final AssetModel asset = getItem(position);
         //Setting the texts
         //((TextView) convertView.findViewById(R.id.description)).setText(asset.description);
-        //((TextView) convertView.findViewById(R.id.title)).setText(asset.title);
 
         //Using Picasso to cache the image
-        Picasso.get().load(asset.getUrl()).into((ImageView) convertView.findViewById(R.id.imageView));
+        Picasso.get().load(asset.getUrl()).into((ImageView) convertView.findViewById(R.id.imageView2));
 
         //Listener for the click on the item
         convertView.setOnClickListener(new View.OnClickListener() {

@@ -6,9 +6,9 @@ public class AssetModel {
 
     private String id;
     private String url;
-    private ArrayList category;
+    private String category;
 
-    public AssetModel(String id, String url, ArrayList category) {
+    public AssetModel(String id, String url, String category) {
         this.id = id;
         this.url = url;
         this.category = category;
@@ -22,7 +22,8 @@ public class AssetModel {
         return this.url;
     }
 
-    public ArrayList getCategory(){
-        return this.category;
+    public String getCategory(){
+
+        return this.category.toUpperCase();
     }
 }

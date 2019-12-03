@@ -1,5 +1,5 @@
 package cat.gimbernat.gimbersounds.scenes.detailcategoriesList.interfaces;
 
 public interface IDetailCategoriesListPresenter {
-    void subscribeForAssets();
+    void subscribeForAssets(String category);
 }

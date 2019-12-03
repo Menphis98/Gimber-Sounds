@@ -1,6 +1,5 @@
 package cat.gimbernat.gimbersounds.scenes.detailcategoriesList;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
@@ -10,10 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import cat.gimbernat.gimbersounds.R;
 import cat.gimbernat.gimbersounds.models.AssetModel;
-import cat.gimbernat.gimbersounds.scenes.detailcategoriesList.DetailCategoriesListActivity;
-import cat.gimbernat.gimbersounds.scenes.categoriesList.interfaces.ICategoriesListActivity;
 import cat.gimbernat.gimbersounds.scenes.detailcategoriesList.interfaces.IDetailCategoriesListActivity;
-import cat.gimbernat.gimbersounds.scenes.login.TermsActivity;
 
 public class DetailCategoriesListActivity extends AppCompatActivity implements IDetailCategoriesListActivity {
 
@@ -24,7 +20,7 @@ public class DetailCategoriesListActivity extends AppCompatActivity implements I
     private ProgressBar spinner;
 
     //Intent Input parameter
-    public static String CONSTANT_ID_ASSET = "PARAM_ID_ASSET";
+    public static String CONSTANT_ID_CATEGORY = "PARAM_ID_CATEGORY";
 
     //Lifecycle
     @Override
@@ -33,18 +29,18 @@ public class DetailCategoriesListActivity extends AppCompatActivity implements I
         setContentView(R.layout.detail_activity_categories_list);
 
         //init the UI
-        this.spinner = (ProgressBar)findViewById(R.id.progressBarGallery);
+        this.spinner = (ProgressBar)findViewById(R.id.progressBarGallery2);
         //Init the presenter
         this.presenter = new DetailCategoriesListPresenter(this);
 
         //Getting parameter from intent
-        String assetId = DetailCategoriesListActivity.this.getIntent().getStringExtra(CONSTANT_ID_ASSET);
+        String category = DetailCategoriesListActivity.this.getIntent().getStringExtra(CONSTANT_ID_CATEGORY);
 
         //Fill the detail information
-        this.presenter.getAssetsByCategory(assetId);
+        this.presenter = new DetailCategoriesListPresenter(this);
 
         //Call the preseenter to subscribe for assets
-        this.presenter.subscribeForAssets();
+        this.presenter.subscribeForAssets(category);
     }
 
     @Override
@@ -55,7 +51,7 @@ public class DetailCategoriesListActivity extends AppCompatActivity implements I
     @Override
     public void setAdapterForGrid() {
         //Setup the presenter as Adapter for the GridView when the presenter is ready
-        ((GridView) findViewById(R.id.galleryGrid)).setAdapter(this.presenter);
+        ((GridView) findViewById(R.id.galleryGrid2)).setAdapter(this.presenter);
     }
 
     @Override
