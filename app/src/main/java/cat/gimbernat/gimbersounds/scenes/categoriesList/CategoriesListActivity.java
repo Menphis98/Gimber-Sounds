@@ -1,5 +1,6 @@
 package cat.gimbernat.gimbersounds.scenes.categoriesList;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
@@ -11,6 +12,7 @@ import cat.gimbernat.gimbersounds.R;
 import cat.gimbernat.gimbersounds.models.AssetModel;
 import cat.gimbernat.gimbersounds.models.CategoriesModel;
 import cat.gimbernat.gimbersounds.scenes.categoriesList.interfaces.ICategoriesListActivity;
+import cat.gimbernat.gimbersounds.scenes.detailcategoriesList.DetailCategoriesListActivity;
 
 public class CategoriesListActivity extends AppCompatActivity implements ICategoriesListActivity{
 
@@ -42,8 +44,17 @@ public class CategoriesListActivity extends AppCompatActivity implements ICatego
 
 
     @Override
-    public void navigateToDetail(CategoriesModel categoriesModel) {
+    public void navigateToDetail(final CategoriesModel categoriesModel) {
+        this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Intent myIntent = new Intent(CategoriesListActivity.this, DetailCategoriesListActivity.class);
+                //Adding the ID of the model as a parameter
 
+                myIntent.putExtra(DetailCategoriesListActivity.CONSTANT_ID_ASSET, categoriesModel.getid());
+                startActivity(myIntent);
+            }
+        });
     }
 
     @Override
