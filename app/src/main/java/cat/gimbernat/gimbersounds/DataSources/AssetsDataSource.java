@@ -1,5 +1,7 @@
 package cat.gimbernat.gimbersounds.DataSources;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import com.google.firebase.database.DataSnapshot;
@@ -10,6 +12,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import cat.gimbernat.gimbersounds.models.AssetModel;
 import cat.gimbernat.gimbersounds.helpers.Callback;
+import cat.gimbernat.gimbersounds.models.CategoriesModel;
 
 
 public class AssetsDataSource {
@@ -18,14 +21,32 @@ public class AssetsDataSource {
 
     private ArrayList<AssetModel> assetsList = new ArrayList<AssetModel>();
 
-    public AssetModel getCategoryList(String category) {
-        for (AssetModel asset : this.assetsList) {
-            if (asset.getCategory().equals(category)) {
-                return asset;
-            }
-        }
+    public void getAssetsByCategory(final String category, final Callback callback) {
 
-        return null;
+        ArrayList<AssetModel> assetsList = new ArrayList<AssetModel>();
+
+        if (assetsList.isEmpty()){
+            this.fetch(false, new Callback() {
+                @Override
+                public void onSuccess(Object responseObject) {
+                    AssetsDataSource.this.getAssetsByCategory(category, callback);
+                }
+
+                @Override
+                public void onError() {
+                   callback.onError();
+                }
+            });
+
+        } else {
+            for (AssetModel asset : this.assetsList) {
+                if (asset.getCategory().equals(category)) {
+                    assetsList.add(asset);
+                }
+            }
+
+            callback.onSuccess(assetsList);
+        }
     }
 
     public void subscribe(final Callback callback) {
