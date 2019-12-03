@@ -44,13 +44,14 @@ public class CategoriesListActivity extends AppCompatActivity implements ICatego
 
 
     @Override
-    public void navigateToDetail(CategoriesModel categoriesModel) {
+    public void navigateToDetail(final CategoriesModel categoriesModel) {
         this.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 Intent myIntent = new Intent(CategoriesListActivity.this, DetailCategoriesListActivity.class);
                 //Adding the ID of the model as a parameter
-                myIntent.putExtra(DetailCategoriesListActivity.CONSTANT_ID_ASSET, assetModel.id);
+
+                myIntent.putExtra(DetailCategoriesListActivity.CONSTANT_ID_ASSET, categoriesModel.getid());
                 startActivity(myIntent);
             }
         });
