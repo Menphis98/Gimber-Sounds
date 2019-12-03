@@ -37,6 +37,11 @@ public class DetailCategoriesListActivity extends AppCompatActivity implements I
         //Init the presenter
         this.presenter = new DetailCategoriesListPresenter(this);
 
+        //Getting parameter from intent
+        String assetId = DetailCategoriesListActivity.this.getIntent().getStringExtra(CONSTANT_ID_ASSET);
+
+        //Fill the detail information
+        this.presenter.getAssetsByCategory(assetId);
 
         //Call the preseenter to subscribe for assets
         this.presenter.subscribeForAssets();
