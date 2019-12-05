@@ -100,7 +100,8 @@ public class AssetsDataSource {
         String id = item_snapshot.getKey().toString();
         String url = item_snapshot.child("url").getValue().toString();
         String category = item_snapshot.child("category").getValue().toString();
-        category = category.substring(1,5);
+        String[] catName = category.split("=");
+        category = catName[0].replace("{","");
         return new AssetModel(id, url, category);
 
     }

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import cat.gimbernat.gimbersounds.R;
 import cat.gimbernat.gimbersounds.helpers.Callback;
 import cat.gimbernat.gimbersounds.models.AssetModel;
+import cat.gimbernat.gimbersounds.models.CategoriesModel;
 import cat.gimbernat.gimbersounds.scenes.detailcategoriesList.interfaces.IDetailCategoriesListPresenter;
 import com.squareup.picasso.Picasso;
 
@@ -76,8 +77,11 @@ public class DetailCategoriesListPresenter extends BaseAdapter implements IDetai
 
 
         final AssetModel asset = getItem(position);
+
+        //CategoriesModel category = getItem(position);
         //Setting the texts
         //((TextView) convertView.findViewById(R.id.description)).setText(asset.description);
+        ((TextView) convertView.findViewById(R.id.title2)).setText(asset.getID());
 
         //Using Picasso to cache the image
         Picasso.get().load(asset.getUrl()).into((ImageView) convertView.findViewById(R.id.imageView2));
