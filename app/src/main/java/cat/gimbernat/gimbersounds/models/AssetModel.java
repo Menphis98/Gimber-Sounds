@@ -7,11 +7,13 @@ public class AssetModel {
     private String id;
     private String url;
     private String category;
+    private String nombre;
 
-    public AssetModel(String id, String url, String category) {
+    public AssetModel(String id, String url, String category, String nombre) {
         this.id = id;
         this.url = url;
         this.category = category;
+        this.nombre = nombre;
     }
 
     public String getID(){
@@ -21,6 +23,8 @@ public class AssetModel {
     public String getUrl(){
         return this.url;
     }
+
+    public String getNombre(){return this.nombre;}
 
     public String getCategory(){
 

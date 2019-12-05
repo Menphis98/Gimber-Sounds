@@ -99,10 +99,12 @@ public class AssetsDataSource {
 
         String id = item_snapshot.getKey().toString();
         String url = item_snapshot.child("url").getValue().toString();
-        String category = item_snapshot.child("category").getValue().toString();
+        //nombre
+        String nombre = item_snapshot.child("nombre").getValue()!=null?item_snapshot.child("nombre").getValue().toString():"";
+        String category = item_snapshot.child("category").getValue()!=null?item_snapshot.child("category").getValue().toString():"";
         String[] catName = category.split("=");
         category = catName[0].replace("{","");
-        return new AssetModel(id, url, category);
+        return new AssetModel(id, url, category, nombre);
 
     }
 }

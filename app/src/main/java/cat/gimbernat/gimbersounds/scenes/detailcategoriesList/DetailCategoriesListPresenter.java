@@ -81,7 +81,7 @@ public class DetailCategoriesListPresenter extends BaseAdapter implements IDetai
         //CategoriesModel category = getItem(position);
         //Setting the texts
         //((TextView) convertView.findViewById(R.id.description)).setText(asset.description);
-        ((TextView) convertView.findViewById(R.id.title2)).setText(asset.getID());
+        ((TextView) convertView.findViewById(R.id.title2)).setText(asset.getNombre());
 
         //Using Picasso to cache the image
         Picasso.get().load(asset.getUrl()).into((ImageView) convertView.findViewById(R.id.imageView2));
