@@ -3,6 +3,8 @@ package cat.gimbernat.gimbersounds.DataSources;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -97,7 +99,8 @@ public class AssetsDataSource {
 
         String id = item_snapshot.getKey().toString();
         String url = item_snapshot.child("url").getValue().toString();
-        String category = "cat1";//item_snapshot.child("category").toString();
+        String category = item_snapshot.child("category").getValue().toString();
+        category = category.substring(1,5);
         return new AssetModel(id, url, category);
 
     }
