@@ -12,6 +12,7 @@
         <activity android:name=".scenes.login.TermsActivity" android:noHistory="true"></activity>
         <activity android:name=".scenes.categoriesList.CategoriesListActivity" />
         <activity android:name=".scenes.detailcategoriesList.DetailCategoriesListActivity" />
+        <activity android:name=".scenes.reproductor.ReproductorActivity" />
         <activity
             android:name=".scenes.boot.BootActivity"
             android:noHistory="true">

@@ -23,6 +23,17 @@ public class AssetsDataSource {
 
     private ArrayList<AssetModel> assetsList = new ArrayList<AssetModel>();
 
+    public AssetModel getById(String id){
+
+        for (AssetModel asset : this.assetsList) {
+            if (asset.getID().equals(id)) {
+                return asset;
+            }
+        }
+
+        return null;
+    }
+
     public void getAssetsByCategory(final String category, final Callback callback) {
 
         ArrayList<AssetModel> local = new ArrayList<AssetModel>();
