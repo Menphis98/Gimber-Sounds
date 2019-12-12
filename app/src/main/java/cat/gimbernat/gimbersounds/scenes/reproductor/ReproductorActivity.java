@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import cat.gimbernat.gimbersounds.R;
 import cat.gimbernat.gimbersounds.models.AssetModel;
@@ -21,6 +22,7 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
 
     //View outlets
     private ImageView image;
+    private TextView title;
 
 
     //Lifecycle
@@ -31,6 +33,7 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
 
         //Setting the UI
         this.image = this.findViewById(R.id.ReproductorImageView);
+        this.title = this.findViewById(R.id.title3);
 
 
         //Init the presenter
@@ -46,5 +49,8 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
     @Override
     public void fillDetailInformation (AssetModel asset) {
         Picasso.get().load(asset.getUrl()).into(this.image);
+        ((TextView) findViewById(R.id.title3)).setText(asset.getNombre());
+
+
     }
 }

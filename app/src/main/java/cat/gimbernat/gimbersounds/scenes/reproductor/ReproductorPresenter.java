@@ -24,7 +24,11 @@ public class ReproductorPresenter implements IReproductorPresenter{
             ReproductorPresenter.this.assetModel = asset;
             ReproductorPresenter.this.view.fillDetailInformation(ReproductorPresenter.this.assetModel);
         }else {
+
+
             //Todo Show error
         }
     }
+
+
 }
