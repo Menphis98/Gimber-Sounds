@@ -2,7 +2,9 @@ package cat.gimbernat.gimbersounds.scenes.reproductor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +26,10 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
     private ImageView image;
     private TextView title;
 
+    MediaPlayer mediaPlayer;
+    ImageView playIcon;
+
+    String music_url = "https://firebasestorage.googleapis.com/v0/b/gimbersounds.appspot.com/o/content%2Fsonidos%2Fsonido%20bosque.mp3?alt=media&token=337d4c3c-7fb0-4667-8f65-14d22514b43b"
 
     //Lifecycle
     @Override
@@ -44,6 +50,22 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
 
         //Fill the detail information
         this.presenter.getDetailData(assetId);
+
+        playIcon = findViewById(R.id.Play);
+
+        playIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mediaPlayer.isPlaying(){
+
+                }
+            }
+        });
+
+        //minuto 9:50
+        //hacer toast de cada boton
+
+
     }
 
     @Override
