@@ -38,7 +38,7 @@ public class SoundsDataSource {
 
         } else {
             for (SoundModel sound : this.soundsList) {
-                if (sound.getCategorySounds().equals(category.toUpperCase())) {
+                if (sound.getCategorySounds().toUpperCase().equals(category.toUpperCase())) {
                     local.add(sound);
                 }
             }
