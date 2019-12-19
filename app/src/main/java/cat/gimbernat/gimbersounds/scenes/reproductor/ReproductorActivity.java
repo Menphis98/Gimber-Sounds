@@ -63,9 +63,11 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
                 if (!mediaPlayer.isPlaying()){
             mediaPlayer.start();
             playIcon.setImageResource(R.drawable.button_pause);
+                    Toast.makeText(ReproductorActivity.this, "Reproduciendo", Toast.LENGTH_SHORT).show();
                 }else{
                     mediaPlayer.pause();
                     playIcon.setImageResource(R.drawable.button_play);
+                    Toast.makeText(ReproductorActivity.this, "Pausado", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -78,15 +80,13 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
             mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
                 public void onPrepared(MediaPlayer mp) {
-                    Toast.makeText(ReproductorActivity.this, "Reproduciendo", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ReproductorActivity.this, "Audio cargado", Toast.LENGTH_SHORT).show();
                 }
             });
         }catch (IOException e) {
             e.printStackTrace();
         }
-
-        //minuto 9:50
-        //hacer toast de cada boton
+        
 
 
     }
