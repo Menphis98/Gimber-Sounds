@@ -1,8 +1,12 @@
 package cat.gimbernat.gimbersounds.scenes.reproductor;
 
+import java.util.ArrayList;
+
 import cat.gimbernat.gimbersounds.DataSources.AssetsDataSource;
+import cat.gimbernat.gimbersounds.DataSources.SoundsDataSource;
 import cat.gimbernat.gimbersounds.helpers.Callback;
 import cat.gimbernat.gimbersounds.models.AssetModel;
+import cat.gimbernat.gimbersounds.models.SoundModel;
 import cat.gimbernat.gimbersounds.scenes.reproductor.interfaces.IReproductorPresenter;
 
 public class ReproductorPresenter implements IReproductorPresenter{
@@ -22,7 +26,19 @@ public class ReproductorPresenter implements IReproductorPresenter{
 
         if (asset != null) {
             ReproductorPresenter.this.assetModel = asset;
-            ReproductorPresenter.this.view.fillDetailInformation(ReproductorPresenter.this.assetModel);
+            SoundsDataSource.shared.getSoundsByCategory(asset.getCategory(), new Callback() {
+                @Override
+                public void onSuccess(Object responseObject) {
+                    ArrayList<SoundModel> sounds =  (ArrayList<SoundModel>) responseObject;
+                    ReproductorPresenter.this.view.fillDetailInformation(ReproductorPresenter.this.assetModel, sounds);
+
+                }
+
+                @Override
+                public void onError() {
+
+                }
+            });
         }else {
 
 
