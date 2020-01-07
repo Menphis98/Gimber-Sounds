@@ -32,6 +32,7 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
     //View outlets
     private ImageView image;
     private TextView title;
+    private AssetModel asset;
 
     MediaPlayer mediaPlayer;
     ImageView playIcon;
@@ -104,11 +105,10 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
 
     @Override
     public void fillDetailInformation(AssetModel asset, ArrayList<SoundModel> sounds) {
+        Picasso.get().load(asset.getUrl()).into(this.image);
 
         this.sounds = sounds;
-        Picasso.get().load(asset.getUrl()).into(this.image);
-        ((TextView) findViewById(R.id.title3)).setText(asset.getNombre() + " - "+sounds.size());
-
+        this.asset = asset;
         this.cargarcancion();
     }
 
@@ -179,6 +179,9 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
         }else{
             this.prevIcon.setImageAlpha(160);
         }
+
+        int i = this.index + 1;
+        this.title.setText(this.asset.getNombre() + "-"+i+"/"+this.sounds.size());
     }
 
 }

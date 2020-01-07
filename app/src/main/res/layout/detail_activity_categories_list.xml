@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".scenes.detailcategoriesList.DetailCategoriesListActivity">
+    tools:context=".scenes.detailcategoriesList.DetailCategoriesListActivity"
+    android:background="@color/colorPrimaryLigth">
 
     <GridView
         android:id="@+id/galleryGrid2"
