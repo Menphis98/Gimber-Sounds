@@ -35,10 +35,21 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
 
     MediaPlayer mediaPlayer;
     ImageView playIcon;
+    ImageView nextIcon;
+    ImageView prevIcon;
 
     ArrayList<SoundModel> sounds;
 
     //Lifecycle
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mediaPlayer.stop();
+        this.sounds.clear();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -72,14 +83,16 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
                 }
             }
         });
-        this.findViewById(R.id.PreviousAudio).setOnClickListener(new View.OnClickListener() {
+        this.prevIcon = this.findViewById(R.id.PreviousAudio);
+        this.prevIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ReproductorActivity.this.previous();
             }
         });
 
-        this.findViewById(R.id.NextAudio).setOnClickListener(new View.OnClickListener() {
+        this.nextIcon = this.findViewById(R.id.NextAudio);
+        this.nextIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ReproductorActivity.this.next();
@@ -94,7 +107,7 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
 
         this.sounds = sounds;
         Picasso.get().load(asset.getUrl()).into(this.image);
-        ((TextView) findViewById(R.id.title3)).setText(asset.getNombre());
+        ((TextView) findViewById(R.id.title3)).setText(asset.getNombre() + " - "+sounds.size());
 
         this.cargarcancion();
     }
@@ -103,20 +116,17 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
     public void play() {
         mediaPlayer.start();
         playIcon.setImageResource(R.drawable.button_pause);
-        Toast.makeText(ReproductorActivity.this, "Reproduciendo", Toast.LENGTH_SHORT).show();
-
     }
 
     @Override
     public void pause() {
         mediaPlayer.pause();
         playIcon.setImageResource(R.drawable.button_play);
-        Toast.makeText(ReproductorActivity.this, "Pausado", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void next() {
-        if (index <= this.sounds.size()-1) {
+        if (index < this.sounds.size()-1) {
             index = index + 1;
             this.cargarcancion();
         }
@@ -133,14 +143,20 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
 
     @Override
     public void cargarcancion() {
+        updateUI();
+        ReproductorActivity.this.pause();
         String url = this.sounds.get(this.index).getUrl();
 
         try{
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+
             mediaPlayer.setDataSource(url);
             mediaPlayer.prepareAsync();
             mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
                 public void onPrepared(MediaPlayer mp) {
+                    ReproductorActivity.this.play();
                     Toast.makeText(ReproductorActivity.this, "Audio cargado", Toast.LENGTH_SHORT).show();
                 }
             });
@@ -148,4 +164,21 @@ public class ReproductorActivity extends AppCompatActivity implements IReproduct
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void updateUI() {
+        if (index < this.sounds.size()-1) {
+            this.nextIcon.setImageAlpha(255);
+        }else{
+            this.nextIcon.setImageAlpha(160);
+        }
+
+
+        if (index > 0 ){
+            this.prevIcon.setImageAlpha(255);
+        }else{
+            this.prevIcon.setImageAlpha(160);
+        }
+    }
+
 }

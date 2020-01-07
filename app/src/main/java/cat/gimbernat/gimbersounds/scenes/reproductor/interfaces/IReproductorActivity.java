@@ -14,4 +14,6 @@ public interface IReproductorActivity {
     void previous();
     void cargarcancion();
 
+    void updateUI();
+
 }
